@@ -10,15 +10,15 @@
 <body>
 
   
-  <form action="index.php" method="post">
+<form action="index.php" method="post">
 
-    <label for="quantity">x</label>
-    <input type="text" name="x">
+  <label for="radius">radius:</label>
+  <input type="number" name="radius" id="radius">
 
-    <input type="submit" value="total">
+  <input type="submit" value="calculate">
 
 
-  </form>
+</form> <br>
 
 
 
@@ -28,7 +28,13 @@
 </html>
 
 <?php
-  $x = $_POST["x"];
-  echo $x;
+  $radius = $_POST["radius"];
+  $circumference = round(2 * pi() * $radius,2);
+
+  if($radius){
+
+    echo "Circumference is {$circumference} cm <br>";
+  }
+
 ?>
 
