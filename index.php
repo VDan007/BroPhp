@@ -14,11 +14,18 @@
 
 <?php
  
-    function happy_birthday($name,$age){
-      echo "happy {$age} th birthday {$name} <br>";
-    }
+    $username = " Dan Var ";
 
-    happy_birthday("Dan",31);
+    echo strtolower($username) . "<br>";
+    echo strtoupper($username) . "<br>";
+    echo trim($username) . "<br>";
+    echo str_pad($username, 19, "0") . "<br>";
+    $usernameReplaced = str_replace("D","V",$username);
+    echo $usernameReplaced . "<br>";
+    $usernameReverserd = strrev($username);
+    echo $usernameReverserd . "<br>";
+    
+
     
 ?>
 
