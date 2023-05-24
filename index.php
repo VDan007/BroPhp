@@ -45,4 +45,5 @@ include("cookie.php");
   echo "session stuff: <br>";
   echo $_SESSION["username"] . "<br>";
   echo $_SESSION["password"] . "<br>";
+  echo $_SESSION["password"] . "<br>";
 ?>
