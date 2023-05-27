@@ -13,38 +13,25 @@
   <title>Document</title>
 </head>
 <body>
-  This is the homepage <br>
-  Stuff on homepage.
-
-  <form action="index.php" method="post">
-  username:
-  <input type="text" name="username">
-  password:
-  <input type="text" name="password">
-  <input type="submit" name="submit">
+  
+  <form action="<?php $_SERVER["PHP_SELF"] ?>" method="post">
+    username: <br>
+    <input type="text" name="username">
+    <input type="submit" name="submit">
   </form>
 
 </body>
 </html>
 
 <?php
-include("footer.html");
-include("cookie.php");
+  // foreach($_SERVER as $key => $value){
+  //   echo "{$key} => {$value}" . "<br>";
+  // }
 
-  foreach($_COOKIE as $key => $value){
-    echo "{$key} = {$value} <br>";
-  }
-  if($_POST){
-    $_SESSION["username"] = $_POST["username"];
-    $_SESSION["password"] = $_POST["password"];
-
+  if($_SERVER["REQUEST_METHOD"] == "POST"){
+    echo "Hello";
   }else{
-    echo "post not set <br>";
+    echo $_SERVER["REQUEST_METHOD"];
   }
 
-  echo "session stuff: <br>";
-  echo $_SESSION["username"] . "<br>";
-  echo $_SESSION["password"] . "<br>";
-  echo $_SESSION["password"] . "<br>";
-  echo $_SESSION["password"] . "<br>";
 ?>
