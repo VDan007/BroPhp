@@ -1,9 +1,4 @@
 
-<?php
-  session_start();
-  include("header.html");
-    
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,24 +9,12 @@
 </head>
 <body>
   
-  <form action="<?php $_SERVER["PHP_SELF"] ?>" method="post">
-    username: <br>
-    <input type="text" name="username">
-    <input type="submit" name="submit">
-  </form>
+  
 
 </body>
 </html>
 
 <?php
-  // foreach($_SERVER as $key => $value){
-  //   echo "{$key} => {$value}" . "<br>";
-  // }
-
-  if($_SERVER["REQUEST_METHOD"] == "POST"){
-    echo "Hello";
-  }else{
-    echo $_SERVER["REQUEST_METHOD"];
-  }
+ 
 
 ?>
